@@ -1543,7 +1543,7 @@ jobs:
           printf 'path=%s\n' "$bundle_dir" >> "$GITHUB_OUTPUT"
       - name: Upload artifact and evidence
         id: upload_bundle
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: ${{ matrix.upload_name }}
           path: ${{ steps.release_handoff.outputs.path }}
@@ -1585,7 +1585,7 @@ jobs:
           python scripts/measure_gateway_performance.py verify \
             --report dist-evidence/gateway-performance-v1.json
       - name: Upload Gateway performance evidence
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: usagehub-gateway-performance-linux-x64
           path: dist-evidence/gateway-performance-v1.json
